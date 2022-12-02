@@ -8,21 +8,28 @@ body {
   position: fixed;
   width: 100%;
   max-height: 4em;
-  background-color: aliceblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.3em 0;
 }
 
+.top-bar-background {
+  position: absolute;
+  background-color: aliceblue;
+  width: 100%;
+  height: 10em;
+  transform: translateY(-2em);
+}
+
 .UM-logo-and-text {
   display: flex;
   flex-direction: row;
   position: relative;
-  left: 2em;
+  left: 5em;
 }
 .UM-logo-and-text p {
-  font-size: 30px;
+  font-size: 32px;
   margin: auto 0;
 }
 
@@ -38,7 +45,7 @@ body {
 
 .langauge-change-and-search {
   position: relative;
-  right: 2em;
+  right: 5em;
 }
 
 .contact-and-language {
@@ -72,13 +79,13 @@ body {
 }
 
 .top-bar-dissapearing-animation {
-  -webkit-animation: top-bar-dissapearing 0.7s ease-in-out forwards;
-          animation: top-bar-dissapearing 0.7s ease-in-out forwards;
+  -webkit-animation: top-bar-dissapearing 0.6s ease-in-out forwards;
+          animation: top-bar-dissapearing 0.6s ease-in-out forwards;
 }
 
 .top-bar-dissapearing-animation-reverse {
-  -webkit-animation: top-bar-appearing 0.7s ease-in-out forwards;
-          animation: top-bar-appearing 0.7s ease-in-out forwards;
+  -webkit-animation: top-bar-appearing 0.6s ease-in-out forwards;
+          animation: top-bar-appearing 0.6s ease-in-out forwards;
 }
 
 @-webkit-keyframes top-bar-dissapearing {
@@ -86,7 +93,6 @@ body {
     opacity: 100%;
   }
   100% {
-    transform: scale(1.5);
     opacity: 0%;
   }
 }
@@ -96,28 +102,158 @@ body {
     opacity: 100%;
   }
   100% {
-    transform: scale(1.5);
     opacity: 0%;
   }
 }
 @-webkit-keyframes top-bar-appearing {
   0% {
-    transform: scale(1.3);
+    transform: translateY(-3.5em);
     opacity: 0%;
   }
   100% {
-    transform: scale(1);
     opacity: 100%;
+    transform: translateY(-2em);
   }
 }
 @keyframes top-bar-appearing {
   0% {
-    transform: scale(1.3);
+    transform: translateY(-3.5em);
     opacity: 0%;
   }
   100% {
-    transform: scale(1);
     opacity: 100%;
+    transform: translateY(-2em);
+  }
+}
+.dissapearing-animation {
+  -webkit-animation: dissapearing 0.3s ease-in-out forwards;
+          animation: dissapearing 0.3s ease-in-out forwards;
+}
+
+.appearing-animation {
+  -webkit-animation: appearing 1s ease-in-out forwards;
+          animation: appearing 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes dissapearing {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes dissapearing {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@-webkit-keyframes appearing {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes appearing {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.um-text-dissapearing-animation {
+  -webkit-animation: um-text-dissapearing 0.4s forwards;
+          animation: um-text-dissapearing 0.4s forwards;
+}
+
+.um-text-appearing-animation {
+  -webkit-animation: um-text-appearing 0.4s forwards;
+          animation: um-text-appearing 0.4s forwards;
+}
+
+@-webkit-keyframes um-text-dissapearing {
+  0% {
+    opacity: 100%;
+    font-size: 32px;
+  }
+  100% {
+    opacity: 0%;
+    font-size: 20px;
+  }
+}
+
+@keyframes um-text-dissapearing {
+  0% {
+    opacity: 100%;
+    font-size: 32px;
+  }
+  100% {
+    opacity: 0%;
+    font-size: 20px;
+  }
+}
+@-webkit-keyframes um-text-appearing {
+  0% {
+    opacity: 0%;
+    font-size: 20px;
+  }
+  100% {
+    opacity: 100%;
+    font-size: 32px;
+  }
+}
+@keyframes um-text-appearing {
+  0% {
+    opacity: 0%;
+    font-size: 20px;
+  }
+  100% {
+    opacity: 100%;
+    font-size: 32px;
+  }
+}
+.um-logo-dissapearing-animation {
+  -webkit-animation: um-logo-dissapearing 0.4s forwards;
+          animation: um-logo-dissapearing 0.4s forwards;
+}
+
+.um-logo-appearing-animation {
+  -webkit-animation: um-logo-appearing 0.4s forwards;
+          animation: um-logo-appearing 0.4s forwards;
+}
+
+@-webkit-keyframes um-logo-dissapearing {
+  100% {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes um-logo-dissapearing {
+  100% {
+    transform: scale(0.7);
+  }
+}
+@-webkit-keyframes um-logo-appearing {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes um-logo-appearing {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 .background-picture-container {
@@ -137,13 +273,13 @@ body {
 }
 
 .background-picture-animation {
-  -webkit-animation: imageDissapearingAnimaton 0.7s ease-in-out forwards;
-          animation: imageDissapearingAnimaton 0.7s ease-in-out forwards;
+  -webkit-animation: imageDissapearingAnimaton 0.5s ease-in-out forwards;
+          animation: imageDissapearingAnimaton 0.5s ease-in-out forwards;
 }
 
 .background-picture-animation-reverse {
-  -webkit-animation: imageAppearingAnimaton 0.7s ease-in-out forwards;
-          animation: imageAppearingAnimaton 0.7s ease-in-out forwards;
+  -webkit-animation: imageAppearingAnimaton 0.5s ease-in-out forwards;
+          animation: imageAppearingAnimaton 0.5s ease-in-out forwards;
 }
 
 @-webkit-keyframes imageDissapearingAnimaton {
