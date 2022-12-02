@@ -1,11 +1,9 @@
-
-
-
 //importing other scss files
 
 body{
     margin: 0;
     padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 @import "./header";
@@ -19,3 +17,9 @@ body{
 @import "./main-section/programme-video";
 
 @import "./footer";
+
+.placeholder{
+    position: absolute;
+    color: white;
+    opacity: 0;
+}

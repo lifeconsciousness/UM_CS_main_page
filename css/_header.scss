@@ -15,7 +15,7 @@ $orange-main: #ef542c;
 
 .top-bar-background{
     position: absolute;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 10em;
     transform: translateY(-2em);
@@ -33,11 +33,10 @@ $orange-main: #ef542c;
 }
 
 .UM-logo{
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 80px;
+    max-height: 80px;
     min-width: 50px;
     min-height: 50px;
-    background-color: rgb(131, 127, 255);
     margin: 0;
     margin-right: .4em;
 }
@@ -141,6 +140,10 @@ $orange-main: #ef542c;
 
 ////////////////////UM name animation////////////////
 ////////////////////////////////////////////////////
+
+.UM-name{
+    font-weight: 600;
+}
 
 .um-text-dissapearing-animation{
     animation: um-text-dissapearing .4s  forwards;
@@ -257,6 +260,7 @@ $orange-main: #ef542c;
 ////////////////////////////////////////////////////
 
 .navbar{
+    overflow: hidden;
     position: fixed;
     width:74%;
     height: 100px;
@@ -290,6 +294,7 @@ $orange-main: #ef542c;
         }
         .navbar-element{
             grid-row: 1/3;
+            margin-bottom: 4px;
         }
         .my-UM{
             width: 100%;
@@ -311,6 +316,18 @@ $orange-main: #ef542c;
         background-color: white;
         box-shadow: 0 1px rgba(0, 0, 0, 0.488);
         font-size: 17px;
+    }
+}
+
+.navbar-element-active{
+    width: 100%;
+    height: 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ef542c;
+    a{
+        border-bottom: white solid 2px ;
     }
 }
 

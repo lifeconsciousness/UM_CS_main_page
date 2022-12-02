@@ -1,0 +1,21 @@
+$orange-main: #ef542c;
+
+///////////////sidebar styling///////////////
+/////////////////////////////////////////////
+
+.sidebar{
+    position: relative;
+    height: 20em;
+    width: 11.5em;
+    background-color: #ef542c;
+    top: 29em;
+    left: 5em
+}
+
+.sidebar-fixed-position{
+    transform: translateY(-448px);
+    position: fixed;
+}
+.sidebar-fixed-position-reversed{
+    position: relative;
+}

@@ -6,8 +6,11 @@ const umName = document.querySelector(".UM-name")
 const umLogo = document.querySelector(".UM-logo")
 const navbar = document.querySelector(".navbar")
 
+const sidebar = document.querySelector(".sidebar")
+
 
 const animationStartingPoint = 130
+const sidebarGetFixedAt = 448
 //boolean value to prevent appearing animation to start when entering the page
 let firstTime = true 
 
@@ -57,6 +60,17 @@ document.addEventListener("scroll", ()=>{
             navbar.classList.remove("navbar-animation")
             
 
+        }
+    }
+
+    if(scrollTop > sidebarGetFixedAt){
+        sidebar.classList.remove("sidebar-fixed-position-reverse")
+        sidebar.classList.add("sidebar-fixed-position")
+        console.log(scrollTop)
+    } else {
+        if(!firstTime){
+            sidebar.classList.remove("sidebar-fixed-position")
+            sidebar.classList.add("sidebar-fixed-position-reverse")
         }
     }
 
