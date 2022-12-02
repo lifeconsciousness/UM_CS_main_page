@@ -78,7 +78,8 @@ $orange-main: #ef542c;
 
 
 
-//top bar animation
+////////////////////top bar animation////////////////
+////////////////////////////////////////////////////
 
 .top-bar-dissapearing-animation{
     animation: top-bar-dissapearing .6s ease-in-out forwards;
@@ -109,6 +110,8 @@ $orange-main: #ef542c;
 }
 
 
+////////////////////contact lang animation////////////////
+////////////////////////////////////////////////////
 
 .dissapearing-animation{
     animation: dissapearing .3s ease-in-out forwards;
@@ -136,7 +139,8 @@ $orange-main: #ef542c;
     }
 }
 
-
+////////////////////UM name animation////////////////
+////////////////////////////////////////////////////
 
 .um-text-dissapearing-animation{
     animation: um-text-dissapearing .4s  forwards;
@@ -169,7 +173,8 @@ $orange-main: #ef542c;
 }
 
 
-
+////////////////////UM logo animation////////////////
+////////////////////////////////////////////////////
 
 .um-logo-dissapearing-animation{
     animation: um-logo-dissapearing .4s  forwards;
@@ -197,7 +202,7 @@ $orange-main: #ef542c;
     }
 }
 
-//////////////////////image and navbar////////////////
+//////////////////////background image////////////////
 //////////////////////////////////////////////////////
 
 .background-picture-container{
@@ -215,7 +220,7 @@ $orange-main: #ef542c;
     object-fit: cover;
 }
 
-///background image and top bar dissapearting animation///
+///background image dissapearting animation///
 
 .background-picture-animation{
     animation: imageDissapearingAnimaton .5s ease-in-out forwards;
@@ -248,4 +253,94 @@ $orange-main: #ef542c;
 
 
 
+////////////////////navbar//////////////////////////
+////////////////////////////////////////////////////
 
+.navbar{
+    position: fixed;
+    width:74%;
+    height: 100px;
+    top: 7.3em;
+    opacity: 0.8;
+    right: 5em;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+
+    .navbar-main{
+        background-color: rgb(31, 141, 196);
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 22px;
+        }
+        a:hover{
+            border-bottom: white 2px solid !important;
+        }
+        .navbar-element{
+            grid-row: 1/3;
+        }
+        .my-UM{
+            width: 100%;
+            height: 100%;
+            grid-row: 2/3;
+            grid-column: 8/9;
+            background-color: #ef542c;
+            text-align: center;
+            a{
+                font-size: 19px;
+            }
+        }
+    }
+    .navbar-path{
+        height: 35px;
+        display: flex;
+        align-items: center;
+        padding-left: 1em;
+        background-color: white;
+        box-shadow: 0 1px rgba(0, 0, 0, 0.488);
+        font-size: 17px;
+    }
+}
+
+
+.navbar-animation{
+    animation: navbarDissapearingAnimaton .5s ease-in-out forwards;
+}
+
+.navbar-animation-reverse{
+    animation: navbarAppearingAnimaton .5s ease-in-out forwards;
+}
+
+@keyframes navbarDissapearingAnimaton{
+    0%{
+        opacity: 80%;
+    }
+    100%{
+        opacity: 0%;
+        transform: translateY(-3em);
+    }
+}
+
+@keyframes navbarAppearingAnimaton{
+    0%{
+        opacity: 0%;
+        transform: translateY(-3em);
+
+    }
+    100%{
+        opacity: 80%;
+        transform: translateY(0);
+    }
+}

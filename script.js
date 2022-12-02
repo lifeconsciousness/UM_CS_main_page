@@ -4,6 +4,7 @@ const topBarBackground = document.querySelector(".top-bar-background")
 const topBarRight = document.querySelector(".langauge-change-and-search")
 const umName = document.querySelector(".UM-name")
 const umLogo = document.querySelector(".UM-logo")
+const navbar = document.querySelector(".navbar")
 
 
 const animationStartingPoint = 130
@@ -30,6 +31,9 @@ document.addEventListener("scroll", ()=>{
         umLogo.classList.remove("um-logo-appearing-animation")
         umLogo.classList.add("um-logo-dissapearing-animation")
 
+        navbar.classList.remove("navbar-animation-reverse")
+        navbar.classList.add("navbar-animation")
+
 
         firstTime = false
     } else{
@@ -48,6 +52,10 @@ document.addEventListener("scroll", ()=>{
 
             umLogo.classList.remove("um-logo-dissapearing-animation")
             umLogo.classList.add("um-logo-appearing-animation")
+
+            navbar.classList.add("navbar-animation-reverse")
+            navbar.classList.remove("navbar-animation")
+            
 
         }
     }
