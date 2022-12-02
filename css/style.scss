@@ -1,0 +1,18 @@
+//importing other scss files
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+@import "./header";
+@import "./left-panel";
+
+@import "./main-section/campus-tour";
+@import "./main-section/main-section";
+@import "./main-section/ambassador-and-online-events";
+@import "./main-section/brief-description-and-fast-facts";
+@import "./main-section/news-achievements-social-media";
+@import "./main-section/programme-video";
+
+@import "./footer";
